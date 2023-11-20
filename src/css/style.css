@@ -14,34 +14,27 @@ div.wrapper {
 	justify-content: center;
 }
 
-div.main { }
-h1.me { color: var(--cre); font-size: 5rem; font-variant: small-caps; font-weight: 600; }
-h1.me:hover { color: var(--aub); text-shadow: 2px -2px 2px var(--cre); }
+div.main { /* none */ }
+a.ddeous { color: var(--cre); font-size: 5rem; font-variant: small-caps; font-weight: 600; text-decoration: none; }
+a.ddeous:hover { color: var(--aub); text-shadow: -2px 2px 0 var(--cre); }
 
-div.ddot {
+div.dottle {
 	height: 1rem;
 	width: 1rem;
-	background: var(--aub);
-	border: 1px solid var(--cre);
-	border-radius: 100px;
+	background: var(--nig);
+	border: 2px solid (--nig);
+	border-radius: 25px;
 	position: fixed;
-	bottom: 0;
-	left: 0;
+	right: 0;
+	top: 0;
 	margin: 25px 50px;
+	animation: rotate 3000ms infinite;
+	cursor: pointer;
 }
 
-div.ddot:hover {
-	transform: scale(1.2);
-	border-color: var(--aub);
-	box-shadow: 1px 0px 2px var(--aub), 0px 1px 2px var(--aub), -1px 0px 2px var(--aub), 0px -1px 2px var(--aub);
-}
+div.dottle:hover { background: var(--aub); }
+@keyframes rotate { 0%, 100% { border: 3px solid var(--nig) } 50% { border: 3px solid var(--aub) } }
+a.ddeous, a.ddeous:hover, div.dottle, div.dottle:hover { transition: 250ms; }
 
-h1.me, div.ddot { cursor: pointer; }
-h1.me, h1.me:hover, div.ddot, div.ddot:hover { transition: 200ms; }
 
-@keyframes change {
-	0% { color: var(--cre); }
-	75% { color: var(--aub); }
-	100% { color: var(--cre); }
-}
 
